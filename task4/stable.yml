@@ -6,18 +6,17 @@ spec:
   replicas: 4
   selector:
     matchLabels:
-      app: aspnetcore
+      app: nginx-app
       track: stable
   template:
     metadata:
       labels:
-        app: aspnetcore
+        app: nginx-app
         track: stable
     spec:
       containers:
       - name: stable-app
-        image: stable-app
-        imagePullPolicy: IfNotPresent
+        image: nginx:1.16.1-alpine 
         ports:
         - containerPort: 80
         readinessProbe:
