@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: stable-app
-        image: nginx:1.16.1-alpine 
+        image: alihussainia/app:stable 
         ports:
         - containerPort: 80
         readinessProbe:

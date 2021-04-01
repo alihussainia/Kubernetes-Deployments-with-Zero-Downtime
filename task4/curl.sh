@@ -1,5 +1,5 @@
-for ((i=1;i<=20;i++)); 
+for ((i=1;i<=100;i++)); 
 do
-    curl -s "http://localhost:[Port-Number]" | grep "<title>.*</title>"
+    curl -s "http://localhost" | grep "<title>.*</title>"
     sleep .5s
 done
